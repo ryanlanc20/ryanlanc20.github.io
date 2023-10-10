@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ryan Noonan - Projects</title>
+
+    <!-- Metadata -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="title" content="Projects" />
+    <meta name="description" content="Various projects which blend together frontend and backend technologies to solve problems" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ryanlanc20.github.io/projects.html" />
+    <meta property="og:title" content="Projects" />
+    <meta property="og:description" content="Various projects which blend together frontend and backend technologies to solve problems" />
+    <meta property="og:image" content="https://ryanlanc20.github.io/images/promotional-banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ryanlanc20.github.io/projects.html" />
+    <meta property="twitter:title" content="Projects" />
+    <meta property="twitter:description" content="Various projects which blend together frontend and backend technologies to solve problems" />
+    <meta property="twitter:image" content="https://ryanlanc20.github.io/images/promotional-banner.png" />
+
+    <!-- Styles -->
+    <link href="./styles/main.css" rel="stylesheet"/>
+    <link href="./styles/projects.css" rel="stylesheet"/>
+    <link href="./styles/education.css" rel="stylesheet"/>
+    <link href="./styles/language-tags.css" rel="stylesheet"/>
+
+    <!-- Scripts -->
+    <script src="./js/main.js" type="text/javascript"></script>
+    <script src="./js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="navbrand-wrapper">
+        <div class="nav">
+            <div class="brand">
+                <img src="./images/logo.png"/>
+                <button id="showMenu"><img src="./images/menu.png"/></button>
+            </div>
+            <div id="menuLinks" class="links">
+                <ul>
+                    <li><a href="index.html"> Home</a></li>
+                    <li class="active"><a href="#"> Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <div id="projects" class="projects">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer">
+            <div class="footer-copyright">
+                <span>Copyright © Ryan Noonan 2023</span>
+            </div>
+            <div class="licensing">
+                This website © 2023 by Ryan Noonan is licensed under
+                <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="noopener noreferrer">
+                    CC BY-NC-ND 4.0</a>
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1">
+            </div>
+            <div class="footer-links">
+                <span>Attributions</span>
+                <a href="https://www.flaticon.com/free-icons/burger-menu" title="burger menu icons">Burger menu button</a>
+                <a href="https://www.flickr.com/photos/140877171@N03/42764622051/in/photolist-289XSeR-2228L2F-2c7g5ck-BZJqWb-JFhZwd-21qoLdd-fksPf6-crTSc9-VJR2Bt-H6nrEd-2enX8YT-6y4bXT-GbH6tk-2acCzta-DXnPTz-ZBFS8X-YNNLNX-dunHwJ-FZ8F1S-CAVvxU-YmHQvw-d6MaSq-fz68Nz-nFXi3w-nirEcK-2bgUDve-DPvFDP-s74YcS-FTwRPJ-vCh1ro-22hCaBA-QLMEQu-23mC3mo-9fysXj-ZCDFKr-Z6seDu-FDASuA-npC4TR-bRuRJz-apG2MK-231Ez4Q-aP7zGg-QfCSPY-fMsjRu-F2yCH1-2dS4cvF-tA7gSU-MEraGe-28WdGvg-e2zjVX/">Background image</a>
+            </div>
+        </div>
+    </div>
+            <div class="dialog" id="readMoreDialog">
+                <div class="header">
+                    <div class="title" id="readMoreDialogTitle">
+                        Cashflow
+                    </div>
+                    <button id="closeReadMoreDialog">X</button>
+                </div>
+                <div class="body">
+                    <details>
+                        <summary>
+                            About Project
+                        </summary>
+                        <p id="project-details"></p>
+                    </details>
+                    <details>
+                        <summary>
+                            Scope
+                        </summary>
+                        <ul id="project-scope"></ul>
+                    </details>
+                    <details>
+                        <summary>
+                            Challenges
+                        </summary>
+                        <ul id="project-challenges"></ul>
+                    </details>
+                    <details>
+                        <summary>
+                            Achievements
+                        </summary>
+                        <ul id="project-achievements"></ul>
+                    </details>
+                    <details>
+                        <summary>
+                            Areas for future work
+                        </summary>
+                        <ul id="project-future-work"></ul>
+                    </details>
+                </div>
+            </div>
+    <script>
+        var projects = [
+            {
+                "title": "Cashflow",
+                "image": "./images/projects/cashflow.png",
+                "altText": "Promotional image for Cashflow containing pie charts and bar charts",
+                "repo": "https://github.com/ryanlanc20/cashflow",
+                "website": "https://ryanlanc20.github.io/Cashflow",
+                "body": "Cashflow aims to simplify budgeting, by allowing users to add income and expenses to separate tables, and automatically recalculating remaining funds.\
+                         Calculators and spreadsheets are certainly flexible, and probably the best option if you're working on something a little more dynamic or want something bespoke.\
+                         However, for common tasks such as budgeting, there is always the risk of entering the wrong numbers or incorrectly defining formulas.\
+                         With Cashflow, there are no formulas. You just add a new row to one of the tables, edit the contents of relevant columns, and the calculations happen automatically!\
+                ",
+                "scope": [
+                    "Frontend user interface with no backend",
+                    "Ability to add income and expenses to separate tables",
+                    "Ability to view individual totals for income and expenses",
+                    "Ability to view remaining budget",
+                    "Ability to visualize the significance of income and expense sources"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Making the totals bar stick to the top of the screen as the user scrolls",
+                        "solution": "To solve this problem, I used JavaScript to check when the navigation bar scrolls out of the window.\
+                        If the navigation bar scrolls out of the window, the position of the totals bar is set to fixed, which means it will remain at the top of the window\
+                         as the user scrolls. If the navigation bar is still visible in the window, the position of the totals bar is set to relative, which means that the totals bar\
+                         will appear under the navigation bar.\
+                        "
+                    }
+                ],
+                "achievements": [
+                    "Learned how to use the useReducer state hook in React, which allows the details of complex data operators to be hidden away, making the code cleaner and easier to maintain",
+                    "Integrated Google charts, using the 'react-google-charts' module to create pie charts"
+                ],
+                "futurework": [
+                    "Allow users to add individual items in each source, for both income and expenses",
+                    "Allow users to add dates to individual income and expense sources, so that Cashflow can detect short-term insufficient funds",
+                    "Feature to generate a PDF file containing income and expense tables, and also pie charts",
+                    "Ability to export income and expenses data to a CSV file"
+                ],
+                "stack": [
+                    {"iconClass": "bootstrap", "iconLabel": "Bootstrap"},
+                    {"iconClass": "css3", "iconLabel": "CSS3"},
+                    {"iconClass": "javascript", "iconLabel": "JavaScript"},
+                    {"iconClass": "html5", "iconLabel": "HTML5"},
+                    {"iconClass": "nodejs", "iconLabel": "NodeJS"},
+                    {"iconClass": "react", "iconLabel": "React"}
+                ]
+            },
+            {
+                "title": "SierpinskiRGB",
+                "image": "./images/projects/sierpinski.png",
+                "altText": "Promotional image for SierpinskiRGB containing mathematical formulas",
+                "repo": "https://github.com/ryanlanc20/SierpinskiRGB",
+                "nodeployment": "Project not deployable",
+                "body": "The Sierpinski triangle is a form of fractal, in which triangles are recursively divided into lots of smaller triangles.\
+                         A triangle can be split into four triangles; middle, bottom-left, bottom-right, and top.\
+                         The splitting process repeats for all triangles, except the middle triangle.\
+                         I wanted to create this project to practice C++ programming, and experiment with the SFML graphics library (I have a few game ideas in mind for future projects).\
+                ",
+                "scope": [
+                    "Calculate screen coordinates for triangle vertices, and return them in an array",
+                    "Write an adapter class (i.e., SFTriangleWrapper) to convert triangle vertices into SFML triangles",
+                    "Render triangles on screen, supporting both black & white and RGB modes",
+                    "Allow users to control the depth of nested triangles"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Overlapping triangles, with bigger triangles being drawn on top of smaller triangles",
+                        "solution": "To fix this problem, parent triangles (larger triangles) are removed from the tmpOrigins queue\
+                         before proceeding to the next level, therefore preventing them from being rendered again on top of smaller triangles.\
+                        "
+                    }
+                ],
+                "achievements": [
+                    "My first fractal generator!",
+                    "Developed more skills in C++ programming, and how to use SFML"
+                ],
+                "futurework": [
+                    "Provide a slider in the user interface to control depth",
+                    "Define limit on triangle sizes to prevent really small triangles from being drawn on the screen"
+                ],
+                "stack": [
+                    {"iconClass": "cpp", "iconLabel": "C++"},
+                    {"iconClass": "sfml", "iconLabel": "SFML"},
+                    {"iconClass": "visualstudio", "iconLabel": "VisualStudio"}
+                ]
+            },
+            {
+                "title": "Quickshop",
+                "image": "./images/projects/quickshop.png",
+                "altText": "Promotional image for Quickshop containing grocery items",
+                "repo": "https://github.com/ryanlanc20/quickshop",
+                "website": "https://ryanlanc20.github.io/quickshop",
+                "body": "Quickshop is a web application that allows people to create shopping lists quickly and efficiently.\
+                 It automatically calculates total cost every time the price, or quantity of an item changes, allowing you to\
+                  rapidly add and remove items to satisfy budget requirements. It also provides a quick add feature, so that common\
+                  items can be added to your list without needing to re-enter information.\
+                ",
+                "scope": [
+                    "Ability to create one list per day, and switch between lists",
+                    "Ability to add shopping items to a list, including the unit price and item name",
+                    "Ability to edit the name, unit price, and quantity of list items",
+                    "Ability to delete list items",
+                    "Automatically recalculate total cost for selected shopping list"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Shopping list table overflowing container on smaller viewports",
+                        "solution": "Wrap inside a div element and use the class 'table-responsive' to make the table responsive"
+                    },
+                    {
+                        "problem": "Conflicting ids in list items causing multiple items to be overwritten",
+                        "solution": "Use UUID to assign a unique id to each list item, instead of consecutive numbering"
+                    }
+                ],
+                "achievements": [
+                    "Learned basics of React, including components, state hooks, and how to generate production builds"
+                ],
+                "futurework": [
+                    "Allow multiple lists to be created for a day, each of which can have a name (i.e., Groceries, Shoe shopping)",
+                    "Only show the most frequently added items in the quick add section",
+                    "Option to print shopping list",
+                    "Favourites section, along with a button on each list item to add items to favourites"
+                ],
+                "stack": [
+                    {"iconClass": "bootstrap", "iconLabel": "Bootstrap"},
+                    {"iconClass": "css3", "iconLabel": "CSS3"},
+                    {"iconClass": "javascript", "iconLabel": "JavaScript"},
+                    {"iconClass": "html5", "iconLabel": "HTML5"},
+                    {"iconClass": "nodejs", "iconLabel": "NodeJS"},
+                    {"iconClass": "react", "iconLabel": "React"}
+                ]
+            },
+            {
+                "title": "Glimpse",
+                "image": "./images/projects/glimpse.png",
+                "altText": "Promotional image for Glimpse containing a book with highlighted text",
+                "nosource": "Not currently public",
+                "nodeployment": "Deployment coming soon",
+                "body": "Glimpse is a web application that allows people to summarize text, such as news articles.\
+                 I created this to help reduce information overload, given the evergrowing volume of information on the internet.\
+                 Glimpse also allows people to control how much text is contained within the summary.\
+                ",
+                "scope": [
+                    "Backend API for authentication, signup, and text summarization",
+                    "Frontend UI, allowing for authentication, signup, and text summarization",
+                    "Ability to control how much information is returned in the summary",
+                    "Highlighting feature to show summarized text in context of the original text"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Session cookie expiring too quickly (straight after login)",
+                        "solution": "Add expiry offset to current timestamp, as browsers expect expiry date, and not the number of seconds until expiry"
+                    }
+                ],
+                "achievements": [
+                    "Learned and practiced various areas of NLP (Natural Language Processing), including\
+                     frequency counting, and information retrieval techniques such as TFIDF (Term Frequency Inverse Document Frequency)",
+                    "Practiced using the MVC pattern to structure the application"
+                ],
+                "futurework": [
+                    "Scrape content from websites using a URL provided by the user",
+                    "Deploy application to the cloud"
+                ],
+                "stack": [
+                    {"iconClass": "bootstrap", "iconLabel": "Bootstrap"},
+                    {"iconClass": "css3", "iconLabel": "CSS3"},
+                    {"iconClass": "javascript", "iconLabel": "JavaScript"},
+                    {"iconClass": "jquery", "iconLabel": "JQuery"},
+                    {"iconClass": "html5", "iconLabel": "HTML5"},
+                    {"iconClass": "python", "iconLabel": "Python"},
+                    {"iconClass": "mysql", "iconLabel": "MySQL"},
+                    {"iconClass": "docker", "iconLabel": "Docker"}
+                ]
+            },
+            {
+                "title": "IMDB Sentiment Classifier",
+                "image": "./images/projects/imdbreviewclassifier.png",
+                "altText": "Promotional image for IMDB sentiment classifier containing cinema seats and large screen",
+                "nosource": "Not currently public",
+                "nodeployment": "Project not deployable",
+                "body": "IMDB review classifier is a machine learning model which predicts the sentiment of movie reviews,\
+                outputting either a positive or negative label. With the growth of reviews online, models performing such tasks\
+                may help to quickly and efficiently gauge public opinion, from social media posts, blog posts, and other forms of text\
+                where there is no option to explicitly rate movies. This model was trained using the IMDB 50k reviews dataset, for which due\
+                to training times, only 10k reviews were used, stratified by class to ensure a balance between positive and negative reviews.\
+                The MLP (Multilayer perceptron) was used for training, and the input to this model is a padded bag of words vector. The overall\
+                accuracy of the trained classifier is 89%.\
+                ",
+                "scope": [
+                    "Pre-process data and train a classifier to predict the sentiment of movie reviews",
+                    "Compare classification accuracy between different feature extraction methods, such as bag-of-words, TFIDF, and bigrams"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Training time too long, especially when performing cross-validation",
+                        "solution": "Use a smaller sample of reviews, by taking a stratified random sample of 10k reviews from the original dataset"
+                    },
+                    {
+                        "problem":"Feature vectors for each review are not the same size and cannot be inputted into the MLP (which has a fixed size input layer)",
+                        "solution":"Pad each feature vector, by inserting zeros for unique words found across all reviews. This helps to ensure that all feature vectors are the same size"
+                    }
+                ],
+                "achievements": [
+                    "This was my first project combining NLP and machine learning!",
+                    "The classifier achieved an accuracy of 89% when using test data"
+                ],
+                "futurework": [
+                    "Use techniques such as word2vec to assign meaningful values to words, with the aim of increasing accuracy",
+                    "Add a label decoder to transform numerical output into a string (i.e., 0 => Negative, 1 => Positive)",
+                    "Create a function to perform pre-processing on a per sample basis, to make the classifier ready for deployment"
+                ],
+                "stack": [
+                    {"iconClass": "python", "iconLabel": "Python"},
+                    {"iconClass": "scikit", "iconLabel": "Scikit learn"},
+                    {"iconClass": "pandas", "iconLabel": "Pandas"}
+                ]
+            },
+            {
+                "title": "MyInventory",
+                "image": "./images/projects/myinventory.png",
+                "altText": "Promotional image for MyInventory containing warehouse shelving racks",
+                "repo": "https://github.com/ryanlanc20/MyInventory",
+                "nodeployment": "Requires self-hosting",
+                "body": "MyInventory is a web application which allows people to keep track of their personal belongings, entering details such as serial number and product description.\
+                 The aim of this system is to provide a single point of reference in cases where an item is either lost or stolen, or perhaps multiple items are stolen and you need to provide a list of missing items\
+                  for an insurance claim.\
+                ",
+                "scope": [
+                    "System requires authentication, so user login and signup pages are required",
+                    "Each user has their own inventory list, and cannot view the lists of other users",
+                    "Users can add, edit, and delete items in their own lists"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Manually creating MVC files is tedious and error-prone",
+                        "solution": "Used the bake utility to scaffold MVC classes for all required pages, which helped to speed things up significantly and make sure that relevant namespaces\
+                         were included in files, meaning no errors."
+                    }
+                ],
+                "achievements": [
+                    "Learned how to implement authorization policies, which determine the operations that users can perform on data (i.e., only item owners can modify entries for their belongings)"
+                ],
+                "futurework": [
+                    "Feature to export CSV/Spreadsheet file of inventory items",
+                    "Feature to generate PDF file listing inventory items"
+                ],
+                "stack": [
+                    {"iconClass": "html5", "iconLabel": "HTML5"},
+                    {"iconClass": "css3", "iconLabel": "CSS3"},
+                    {"iconClass": "cakephp", "iconLabel": "CakePHP"},
+                    {"iconClass": "php", "iconLabel": "PHP"},
+                    {"iconClass": "mysql", "iconLabel": "MySQL"}
+                ]
+            },
+            {
+                "title": "MyStructure",
+                "image": "./images/projects/mystructure.png",
+                "altText": "Promotional image for MyStructure containing notepad and hot drink",
+                "repo": "https://github.com/ryanlanc20/mystructure",
+                "website": "https://ryanlanc20.github.io/mystructure/",
+                "body": "MyStructure is a TODO list web application, that allows people to plan their days in detail. I created this during the COVID-19 pandemic,\
+                 to help add structure to my days, given the toll of restrictions. The app places emphasis on flexibility, and does not impose deadlines on tasks,\
+                 or the order in which they must be completed. Tasks can be rescheduled for another day, or deleted all together.\
+                ",
+                "scope": [
+                    "Allows multiple TODO lists to be created (one for each day), which can be switched between using a date field",
+                    "Allows tasks to be added to a TODO list by providing a task description",
+                    "Quickadd tags based on recently added items, sorted in descending order according to frequency",
+                    "Ability to mark items as completed and vice versa",
+                    "Ability to reschedule calendar events to another day",
+                    "Ability to delete tasks",
+                    "Progress bar to visualize overall progress for a particular TODO list"
+                ],
+                "challenges": [
+                    {
+                        "problem":"Task actions initially flowed onto next line for smaller viewports, which made the buttons disorganized",
+                        "solution": "Align task actions to left underneath item description, causing all buttons to remain in position for smaller viewports"
+                    }
+                ],
+                "achievements": [
+                    "Learned fundamentals of Bootstrap CSS",
+                    "Learned how to use linear-gradient in CSS, which allows for a smooth transition between two colours",
+                    "Created a typing animation for the headline text"
+                ],
+                "futurework": [
+                    "Store TODO lists on a server, allowing users to view lists on any device",
+                    "Add priority ranking feature, ranking tasks by number. Alternatively, use\
+                    the time management matrix and display it above the TODO list"
+                ],
+                "stack": [
+                    {"iconClass": "bootstrap", "iconLabel": "Bootstrap"},
+                    {"iconClass": "javascript", "iconLabel": "JavaScript"},
+                    {"iconClass": "jquery", "iconLabel": "JQuery"},
+                    {"iconClass": "html5", "iconLabel": "HTML5"}
+                ]
+            }
+        ];
+
+        function renderLanguageTags(languageTags)
+        {
+            let container = $("<div></div>").addClass("language-tags");
+
+            languageTags.forEach((language) => {
+                let tagWrapper = $("<div></div>").addClass("tag-wrapper");
+
+                // Build tag icon
+                let tag = $("<div></div>").addClass("tag");
+                let image = $("<img>").addClass(language.iconClass).attr("title",language.iconLabel).attr("alt", language.iconLabel + " icon");
+                $(tag).append(image);
+
+                // Add tag label
+                let tagLabel = $("<span>").text(language.iconLabel);
+                
+                tagWrapper.append(tag);
+                tagWrapper.append(tagLabel);
+                $(container).append(tagWrapper);
+            });
+
+            return container;
+        }
+
+        function buildGitRepoButton(project)
+        {
+            // Build git repo button
+            let button = $("<button></button>");
+            button.append($("<img>").attr("src","./images/github.png").attr("alt", "GitHub icon"));
+            let btnText = "View repository on GitHub";
+
+            if(project.hasOwnProperty("repo") && project.repo.length !== null)
+            {
+                button.click(function(){
+                    window.open(project.repo,"_blank");
+                });
+            }
+            else {
+                button.attr("disabled",true);
+
+                if (project.hasOwnProperty("nosource"))
+                {
+                    btnText = project.nosource;
+                }
+            }
+
+            button.append($("<span></span>").addClass("img-side-text").text(btnText));
+
+            return button;
+        }
+
+        function buildWebLinkButton(project)
+        {
+            // Build website link button
+            let websiteBtn = $("<button></button>");
+            websiteBtn.append($("<img>").attr("src","./images/web.png").attr("alt","Website icon"));
+            let websiteBtnText = "View project website";
+
+            if(project.hasOwnProperty("website") && project.website.length !== null)
+            {
+                websiteBtn.click(function(){
+                    window.open(project.website,"_blank");
+                });
+            }
+            else {
+                websiteBtn.attr("disabled",true);
+
+                if (project.hasOwnProperty("nodeployment"))
+                {
+                    websiteBtnText = project.nodeployment;
+                }
+            }
+
+            websiteBtn.append($("<span></span>").addClass("img-side-text").text(websiteBtnText));
+
+            return websiteBtn;
+        }
+
+        function renderList(list,items,transformer)
+        {
+            items.forEach((item) => {
+                let listItem = $("<li>");
+                if(typeof transformer === "function")
+                {
+                    listItem.append(transformer(listItem,item));
+                }
+                else
+                {
+                    listItem.append(item);
+                }
+                list.append(listItem);
+            });
+        }
+
+        function renderProjects(parent,projects,maxBodyLength)
+        {
+            projects.forEach((project) => {
+                let container = $("<div></div>").addClass("project");
+                let image = $("<img>").attr("src",project.image).attr("alt",project.altText);
+                let title = $("<div></div>").addClass("title").html($("<span>").addClass("text").text(project.title));
+                let ellipses = project.body.length >= maxBodyLength ? "..." : "";
+                let body = $("<p></p>").text(project.body.substr(0,maxBodyLength) + ellipses);
+
+                // Build links container
+                let linksBox = null;
+                linksBox = $("<div></div>").addClass("repo");
+                linksBox.append(buildGitRepoButton(project));
+                linksBox.append(buildWebLinkButton(project));
+
+                // Text overflows, so open remaining text in a dialog
+                if(ellipses)
+                {
+                    let openReadMore = $("<a href=\"\">Read more</a>");
+                    openReadMore.click(function(e){
+                        // Prevent page scrolling
+                        $("body").css({"overflow": "hidden"});
+                        e.preventDefault();
+
+                        // Clear existing lists
+                        $("#project-scope").empty();
+                        $("#project-challenges").empty();
+                        $("#project-achievements").empty();
+                        $("#project-future-work").empty();
+
+                        // Populate dialog with content
+                        $("#readMoreDialogTitle").text(project.title);
+                        $("#project-details").text(project.body);
+                        renderList($("#project-scope"), project.scope);
+                        renderList($("#project-challenges"), project.challenges, function(listItem,item){
+                            listItem.append("<b>Problem: </b>" + item.problem);
+                            let sublist = $("<ul>");
+                            let solutionItem = $("<li>");
+                            solutionItem.append("<b>Solution: </b>" + item.solution);
+                            sublist.append(solutionItem);
+                            listItem.append(sublist);
+                        });
+                        renderList($("#project-achievements"), project.achievements);
+                        renderList($("#project-future-work"), project.futurework);
+
+                        // Link position
+                        let linkLeft = $(this).offset().left;
+                        let linkTop = $(this).offset().top;
+
+                        // Show dialog
+                        $("#readMoreDialog").css({
+                            "width":"0",
+                            "height": "0",
+                            "float": "none",
+                            "margin-left": linkLeft - $(window).scrollLeft(),
+                            "margin-top": linkTop - $(window).scrollTop(),
+                            "opacity": 0,
+                            "rotate": "0deg"
+                        })
+                        .show()
+                        .animate({
+                            "width": "100%",
+                            "height": "100%",
+                            "margin-left": "0",
+                            "margin-top": "0",
+                            "opacity": 1
+                        },{"duration": 1000});
+
+                        // Delete old event handlers
+                        $("#closeReadMoreDialog").off();
+
+                        // Make sure dialog end position is the same as the clicked link
+                        $("#closeReadMoreDialog").click(function(){
+                            $("body").css({"overflow": "scroll"});
+                            $("#readMoreDialog").animate({
+                                "width": "0%",
+                                "height": "0%",
+                                "margin-left": linkLeft - $(window).scrollLeft(),
+                                "margin-top": linkTop - $(window).scrollTop(),
+                                "opacity": "0",
+                                "rotate": "-360deg"
+                            },{"duration": 1000});
+                        });
+                    });
+                    body.append(openReadMore);
+                }
+
+                // Assemble project card
+                $(container).append(image);
+                $(container).append(title);
+                $(container).append(body);
+                $(container).append(linksBox);
+                $(container).append(renderLanguageTags(project.stack));
+                $(parent).append(container);
+            });
+        }
+
+        $(document).ready(function(){
+            attachMenuOpenAction($("#showMenu"),$("#menuLinks"));
+            renderProjects($("#projects"),projects,200);
+        });
+    </script>
+</body>
+</html>

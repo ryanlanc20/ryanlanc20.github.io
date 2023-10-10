@@ -1,0 +1,98 @@
+.education
+{
+    float: left;
+    width: CALC(100%);
+    min-height: 200px;
+    padding-bottom: 30px;
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.education .header
+{
+    width: CALC(100% - 40px);
+    float: left;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+.education .title
+{
+    float: left;
+}
+.education .institution
+{
+    width: 100%;
+    font-size: 12pt;
+    margin-top: 20px;
+    float: left;
+}
+.education .date
+{
+    float: right;
+}
+.education .details
+{
+    float: left;
+    width: CALC(100% - 40px);
+    line-height: 2;
+    padding: 0px 20px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 0px;
+    margin-top: 25px;
+}
+
+/* Project list*/
+.education .details .project-list
+{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.education .details .project-list .items
+{
+    width: 100%;
+    float: left;
+}
+
+.education .details .project-list .items details
+{
+    float: left;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.education .details .project-list .items details p
+{
+    width: CALC(100% - 30px);
+    float: left;
+    padding: 15px;
+    margin: 0;
+}
+
+.education .details .project-list .items details summary
+{
+    float: left;
+    width: CALC(100% - 20px);
+    background-image: linear-gradient(hsl(200,70%,40%), hsl(200,70%,10%));
+    color: #fff;
+    padding: 10px;
+}
+
+.education .details .project-list .items details summary:hover
+{
+    cursor: pointer;
+}
+
+.education .details .project-list .items details:first-child summary
+{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.education .details .project-list .items details:last-child summary
+{
+    border-radius: 0px 0px 5px 5px;
+}
+

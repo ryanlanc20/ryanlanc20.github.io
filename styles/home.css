@@ -1,0 +1,180 @@
+.banner
+{
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    float:left;
+    background-image: url("../images/nebula.jpg");
+    background-size: cover;
+    box-shadow: 0px 10px 15px #272727;
+    border-bottom: 1px solid #333;
+}
+.banner .banner-content
+{
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 400px;
+    height: auto;
+}
+
+@media only screen and (max-width: 1024px)
+{
+    .banner .banner-content
+    {
+        width: 100%;
+    }
+}
+
+.banner .banner-content .photo-bg
+{
+    background-image: conic-gradient(#7700ff 45deg, #7bff00 180deg,#7700ff 315deg);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: -125px;
+    margin-bottom: 20px;
+}
+.banner .banner-content .photo
+{
+    width: 140px;
+    height: 140px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 360px;
+    float: left;
+}
+
+.banner .banner-content .name
+{
+    width: 100%;
+    min-height: 45px;
+    height: auto;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 30pt;
+    padding: 10px;
+    background-color: rgba(51,51,51,0.6);
+    color: #fff;
+    border-radius: 5px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.banner .banner-content .name > div
+{
+    float: left;
+    width: 100%;
+}
+
+.banner .banner-content .name div h2
+{
+    width: 100%;
+    background: -webkit-linear-gradient(left,#ffc800,#ededed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px)
+{
+    .banner .banner-content .name
+    {
+        width: 90%;
+        float: left;
+        margin-left: 5%;
+    }
+}
+
+
+.banner .banner-content .headline
+{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15pt;
+    background-color: rgba(51,51,51,0.6);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    line-height: 1.50;
+}
+
+.banner .banner-content .headline span
+{
+    background: -webkit-linear-gradient(left,#00e5ff,#ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+@media only screen and (max-width: 1024px)
+{
+    .banner .banner-content .headline
+    {
+        width: 90%;
+        float: left;
+        margin-left: 5%;
+    }
+}
+
+.banner .social-links
+{
+    width: 100%;
+    min-height: 45px;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.banner .social-links button
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.banner .img-attribution-wrapper
+{
+    width: 100%;
+    float: left;
+}
+
+.banner .img-attribution
+{
+    float: right;
+    background-color: rgba(51,51,51,0.6);
+    color: #fff;
+    padding: 2.5px;
+    margin-top: 50px;
+}
+
+.banner .img-attribution a
+{
+    color: #fff;
+    font-size: 10pt;
+}
+
+.intro
+{
+    width: CALC(100% - 50px);
+    min-height: 200px;
+    float: left;
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 25px;
+}
+.intro h2
+{
+    margin: 0;
+}
+.intro p
+{
+    line-height: 1.8;
+}
